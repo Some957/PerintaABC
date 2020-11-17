@@ -19,6 +19,16 @@ namespace PerintäABC
         }
     }
 
+    class Program2
+    {
+        static void Main()
+        {
+            Perl perl = new Perl();
+            perl.Write();
+        }
+    }
+
+
     abstract class baseclass
     {
         public int num = 8;
@@ -49,4 +59,20 @@ namespace PerintäABC
     class child3 : classbase
     {
     }
+
+class Net
+{
+    public int _value = 6;
 }
+
+class Perl : Net
+{
+    public new int _value = 7;
+    public void Write()
+    {
+        // Show difference between base and this.
+        Console.WriteLine(base._value);
+        Console.WriteLine(this._value);
+    }
+}
+    }
